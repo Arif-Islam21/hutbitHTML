@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="bg-gradient-to-b from-[#012a36] to-[#0d4b6e] min-h-screen text-white"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | HUTBIT</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="lg:max-w-md mx-auto">
+    <nav class="">
+      <div class="navbar flex justify-between items-center p-4 bg-first">
+        <div class="navbar-start"></div>
+
+        <div class="navbar-center">
+          <a href="/" class="text-xl font-bold text-white">HUTBIT</a>
+        </div>
+
+        <div class="navbar-end">
+          <button
+            id="menuBtn"
+            class="btn btn-ghost bg-[#012a36] text-white p-2 rounded"
+          >
+            <!-- Menu Icon (HiMenuAlt4 replacement) -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden fixed inset-0 z-50 bg-black/70 p-4 flex flex-col lg:max-w-md mx-auto items-start"
+      >
+        <button id="closeMenu" class="text-white text-3xl self-end mb-4">
+          &times;
+          <!-- HiX replacement -->
+        </button>
+        <ul class="menu text-white w-full space-y-2">
+          <li>
+            <a href="/" class="block p-2 rounded hover:bg-gray-700">Home</a>
+          </li>
+          <li>
+            <a href="/profile" class="block p-2 rounded hover:bg-gray-700"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a href="/groups" class="block p-2 rounded hover:bg-gray-700"
+              >Group</a
+            >
+          </li>
+          <li>
+            <a href="./boost.html" class="block p-2 rounded hover:bg-gray-700"
+              >Boost</a
+            >
+          </li>
+          <li>
+            <a href="/profit" class="block p-2 rounded hover:bg-gray-700"
+              >Profit</a
+            >
+          </li>
+          <li>
+            <a href="/wallet" class="block p-2 rounded hover:bg-gray-700"
+              >Wallet</a
+            >
+          </li>
+          <li>
+            <a href="/support" class="block p-2 rounded hover:bg-gray-700"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a href="./aboutUs.html" class="block p-2 rounded hover:bg-gray-700"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/login" class="block p-2 rounded hover:bg-gray-700"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="min-h-screen bg-gradient-to-b from-first to-second px-4">
+      <h2 class="text-3xl font-semibold text-center text-white mb-6 mt-4">
+        Services
+      </h2>
+      <div
+        class="w-full flex flex-col mb-8 gap-12 items-center justify-center max-w-sm p-6 bg-transparent rounded-lg"
+      >
+        <!-- CARD ONE -->
+        <div class="card bg-first shadow-lg shadow-ninth">
+          <div class="card-body">
+            <h2 class="text-2xl font-semibold text-center mb-3">
+              Mining Farm Setup
+            </h2>
+            <p>
+              We build and manage top-tier crypto mining farms using powerful
+              ASIC hardware. Our infrastructure ensures maximum efficiency,
+              uptime, and output.
+            </p>
+          </div>
+        </div>
+        <!-- CARD ONE -->
+        <div class="card bg-first shadow-lg shadow-ninth">
+          <div class="card-body">
+            <h2 class="text-2xl font-semibold text-center mb-3">
+              Mining Farm Setup
+            </h2>
+            <p>
+              We build and manage top-tier crypto mining farms using powerful
+              ASIC hardware. Our infrastructure ensures maximum efficiency,
+              uptime, and output.
+            </p>
+          </div>
+        </div>
+        <!-- CARD ONE -->
+        <div class="card bg-first shadow-lg shadow-ninth">
+          <div class="card-body">
+            <h2 class="text-2xl font-semibold text-center mb-3">
+              Mining Farm Setup
+            </h2>
+            <p>
+              We build and manage top-tier crypto mining farms using powerful
+              ASIC hardware. Our infrastructure ensures maximum efficiency,
+              uptime, and output.
+            </p>
+          </div>
+        </div>
+        <!-- CARD ONE -->
+        <div class="card bg-first shadow-lg shadow-ninth">
+          <div class="card-body">
+            <h2 class="text-2xl font-semibold text-center mb-3">
+              Mining Farm Setup
+            </h2>
+            <p>
+              We build and manage top-tier crypto mining farms using powerful
+              ASIC hardware. Our infrastructure ensures maximum efficiency,
+              uptime, and output.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGES -->
+      <div
+        class="w-full flex flex-col gap-12 items-center justify-center max-w-sm p-6 bg-transparent rounded-lg py-12"
+      >
+        <div class="flex items-center relative w-full">
+          <img
+            src="../assets/pictures/services/bit.png"
+            alt="Bit"
+            class="size-28 absolute left-2/3"
+          />
+        </div>
+        <div class="flex items-center relative w-full">
+          <img
+            src="../assets/pictures/services/usdc.png"
+            alt="USDC"
+            class="size-26"
+          />
+        </div>
+        <div class="flex items-center relative w-full">
+          <img
+            src="../assets/pictures/services/doge.png"
+            alt="Doge"
+            class="size-24 absolute right-1/4"
+          />
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div
+        class="w-full flex flex-col gap-12 items-center justify-center max-w-sm p-6 bg-transparent rounded-lg py-12"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-center">ASIC</h2>
+          <p class="textarea-md font-thin text-center">Mining</p>
+        </div>
+        <p class="text-white">
+          ASIC mining refers to the use of Application-Specific Integrated
+          Circuit devices that are built solely for mining cryptocurrencies.
+          Unlike general-purpose hardware like CPUs or GPUs, ASICs are designed
+          to mine specific algorithms such as SHA-256 for Bitcoin or KHeavyHash
+          for Kaspa. These machines are highly efficient, offering faster
+          processing and lower energy consumption, making them ideal for
+          large-scale mining operations. While they provide higher profitability
+          and are easier to scale, ASICs are costly, lack flexibility, and
+          contribute to mining centralization. They're commonly used for mining
+          coins like Bitcoin, Dogecoin, and Kaspa.
+        </p>
+        <div>
+          <img src="../assets/pictures/services/bank.png" alt="bank photo" />
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div>
+        <footer
+          class="footer flex px-4 items-center justify-between bg-transparent text-white py-10"
+        >
+          <h6 class="text-md font-semibold">About us</h6>
+          <h6 class="text-md font-semibold">Terms & Condition</h6>
+          <h6 class="text-md font-semibold">Support</h6>
+          <h6 class="text-md font-semibold">Privacy policy</h6>
+        </footer>
+        <hr />
+        <div class="footer-info text-center text-sm mt-4 pb-4">
+          © 2025 All Rights Reserved by HUTBIT
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const closeMenu = document.getElementById("closeMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

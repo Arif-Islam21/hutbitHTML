@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="min-h-screen bg-gradient-to-b from-[#00323d] to-[#140B27]"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boost Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes moveLeftArm {
+        0% {
+          top: 32px;
+          left: calc(50% - 105px);
+          transform: translate(0, 0);
+        }
+        100% {
+          top: 130px;
+          left: 53%;
+          transform: translate(-50%, 0);
+        }
+      }
+
+      @keyframes moveRightArm {
+        0% {
+          top: 30px;
+          left: calc(50% + 75px);
+          transform: translate(0, 0);
+        }
+        100% {
+          top: 130px;
+          left: 48%;
+          transform: translate(-50%, 0);
+        }
+      }
+
+      @keyframes moveDotDown {
+        0% {
+          top: 130px;
+          transform: translateX(-50%);
+        }
+        100% {
+          top: calc(100% - 40px);
+          transform: translateX(-50%);
+          display: none;
+        }
+      }
+
+      .ball-left,
+      .ball-right,
+      .dot-animation {
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        border-radius: 9999px;
+        position: absolute;
+      }
+
+      .ball-left {
+        animation: moveLeftArm 2s ease-in forwards;
+      }
+
+      .ball-right {
+        animation: moveRightArm 2s ease-in forwards;
+      }
+
+      .dot-animation {
+        left: 50%;
+        transform: translateX(-50%);
+        animation: moveDotDown 4s linear forwards;
+      }
+
+      .stage-0 {
+        top: 130px;
+      }
+      .stage-1 {
+        top: 180px;
+      }
+      .stage-2 {
+        top: 260px;
+      }
+      .stage-3 {
+        top: 340px;
+      }
+      .stage-4 {
+        top: 420px;
+      }
+    </style>
+  </head>
+  <body class="lg:max-w-md mx-auto">
+    <nav class="">
+      <div class="navbar flex justify-between items-center p-4 bg-first">
+        <div class="navbar-start"></div>
+
+        <div class="navbar-center">
+          <a href="/" class="text-xl font-bold text-white">HUTBIT</a>
+        </div>
+
+        <div class="navbar-end">
+          <button
+            id="menuBtn"
+            class="btn btn-ghost bg-[#012a36] text-white p-2 rounded"
+          >
+            <!-- Menu Icon (HiMenuAlt4 replacement) -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden fixed inset-0 z-50 bg-black/70 p-4 flex flex-col lg:max-w-md mx-auto items-start"
+      >
+        <button id="closeMenu" class="text-white text-3xl self-end mb-4">
+          &times;
+          <!-- HiX replacement -->
+        </button>
+        <ul class="menu text-white w-full space-y-2">
+          <li>
+            <a href="/" class="block p-2 rounded hover:bg-gray-700">Home</a>
+          </li>
+          <li>
+            <a href="/profile" class="block p-2 rounded hover:bg-gray-700"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a href="/groups" class="block p-2 rounded hover:bg-gray-700"
+              >Group</a
+            >
+          </li>
+          <li>
+            <a href="./boost.html" class="block p-2 rounded hover:bg-gray-700"
+              >Boost</a
+            >
+          </li>
+          <li>
+            <a href="/profit" class="block p-2 rounded hover:bg-gray-700"
+              >Profit</a
+            >
+          </li>
+          <li>
+            <a href="/wallet" class="block p-2 rounded hover:bg-gray-700"
+              >Wallet</a
+            >
+          </li>
+          <li>
+            <a href="/support" class="block p-2 rounded hover:bg-gray-700"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a href="./aboutUs.html" class="block p-2 rounded hover:bg-gray-700"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/login" class="block p-2 rounded hover:bg-gray-700"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="flex items-center justify-center p-4">
+      <div class="relative w-64 h-[500px] flex items-center justify-center">
+        <!-- Arms -->
+        <div
+          id="left-arm"
+          class="absolute top-0 left-1/2 w-8 h-40 origin-bottom-left rotate-[-45deg] rounded-full bg-[#CFCFCF] transition-colors duration-1000"
+        ></div>
+        <div
+          id="right-arm"
+          class="absolute top-0 right-1/2 w-8 h-40 origin-bottom-right rotate-[45deg] rounded-full bg-[#CFCFCF] transition-colors duration-1000"
+        ></div>
+
+        <!-- Stem -->
+        <div
+          id="stem"
+          class="absolute top-36 w-8 h-[70%] rounded-full z-10 bg-[#CFCFCF] transition-colors duration-1000"
+        ></div>
+
+        <!-- Stages -->
+        <div
+          class="absolute top-40 h-[70%] left-1/2 transform -translate-x-[47%] -translate-y-[30px] w-full text-white z-20"
+        >
+          <div
+            class="flex flex-col h-full justify-between items-center gap-6 mt-2"
+            id="stage-list"
+          >
+            <!-- Dynamically injected by JS -->
+          </div>
+        </div>
+
+        <!-- Balls -->
+        <div class="absolute ball-left z-30" id="ball-left"></div>
+        <div class="absolute ball-right z-30" id="ball-right"></div>
+
+        <!-- Falling Ball -->
+        <div class="absolute dot-animation z-30 hidden" id="falling-dot"></div>
+      </div>
+    </main>
+    <script>
+      const stages = [
+        { stage: "Stage 1", percentage: "10%", amount: "$250/$500" },
+        { stage: "Stage 2", percentage: "20%", amount: "$250/$2500" },
+        { stage: "Stage 3", percentage: "30%", amount: "$250/$5000" },
+        { stage: "Stage 4", percentage: "40%", amount: "$250/$10000" },
+      ];
+
+      const stageList = document.getElementById("stage-list");
+      const fallingDot = document.getElementById("falling-dot");
+      const stem = document.getElementById("stem");
+      const leftArm = document.getElementById("left-arm");
+      const rightArm = document.getElementById("right-arm");
+      const ballLeft = document.getElementById("ball-left");
+      const ballRight = document.getElementById("ball-right");
+
+      let currentStage = 0;
+
+      // Initial render
+      function renderStages() {
+        stageList.innerHTML = "";
+        stages.forEach((item, index) => {
+          const el = document.createElement("div");
+          el.className = "flex items-center gap-4";
+          el.innerHTML = `
+          <p class="text-xs w-20 text-right">${item.stage}</p>
+          <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md transition-all duration-300 ${
+            index < currentStage
+              ? "bg-[#FFEAA3] text-black"
+              : "bg-white text-black"
+          }">
+            <p class="text-[10px]">${item.percentage}</p>
+          </div>
+          <p class="text-xs w-24 text-left">${item.amount}</p>
+        `;
+          stageList.appendChild(el);
+        });
+      }
+
+      // Trigger animation after delay
+      setTimeout(() => {
+        leftArm.classList.replace("bg-[#CFCFCF]", "bg-teal-800");
+        rightArm.classList.replace("bg-[#CFCFCF]", "bg-teal-800");
+
+        ballLeft.style.display = "none";
+        ballRight.style.display = "none";
+        fallingDot.classList.remove("hidden");
+      }, 2000);
+
+      // Progressively activate stages
+      setTimeout(() => {
+        fallingDot.classList.add(`stage-${currentStage}`);
+        stem.classList.replace("bg-[#CFCFCF]", "bg-teal-800");
+
+        const stageInterval = setInterval(() => {
+          currentStage++;
+          if (currentStage > stages.length) return clearInterval(stageInterval);
+          renderStages();
+          fallingDot.className = `absolute dot-animation z-30 stage-${currentStage}`;
+        }, 900);
+      }, 2000);
+
+      renderStages();
+
+      const menuBtn = document.getElementById("menuBtn");
+      const closeMenu = document.getElementById("closeMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
