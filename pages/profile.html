@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="bg-gradient-to-b from-[#012a36] to-[#0d4b6e] min-h-screen text-white"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="lg:max-w-md mx-auto">
+    <nav class="">
+      <div class="navbar flex justify-between items-center p-4 bg-first">
+        <div class="navbar-start"></div>
+
+        <div class="navbar-center">
+          <a class="text-xl font-bold text-white">HUTBIT</a>
+        </div>
+
+        <div class="navbar-end">
+          <button
+            id="menuBtn"
+            class="btn btn-ghost bg-[#012a36] text-white p-2 rounded"
+          >
+            <!-- Menu Icon (HiMenuAlt4 replacement) -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden fixed inset-0 z-50 bg-black/70 p-4 flex flex-col lg:max-w-md mx-auto items-start"
+      >
+        <button id="closeMenu" class="text-white text-3xl self-end mb-4">
+          &times;
+          <!-- HiX replacement -->
+        </button>
+        <ul class="menu text-white w-full space-y-2">
+          <li>
+            <a href="/" class="block p-2 rounded hover:bg-gray-700">Home</a>
+          </li>
+          <li>
+            <a href="/profile" class="block p-2 rounded hover:bg-gray-700"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a href="/groups" class="block p-2 rounded hover:bg-gray-700"
+              >Group</a
+            >
+          </li>
+          <li>
+            <a
+              href="./pages/boost.html"
+              class="block p-2 rounded hover:bg-gray-700"
+              >Boost</a
+            >
+          </li>
+          <li>
+            <a href="/profit" class="block p-2 rounded hover:bg-gray-700"
+              >Profit</a
+            >
+          </li>
+          <li>
+            <a href="/wallet" class="block p-2 rounded hover:bg-gray-700"
+              >Wallet</a
+            >
+          </li>
+          <li>
+            <a href="/support" class="block p-2 rounded hover:bg-gray-700"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a
+              href="./pages/aboutUs.html"
+              class="block p-2 rounded hover:bg-gray-700"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/login" class="block p-2 rounded hover:bg-gray-700"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <!-- PROFILE AVATER -->
+      <div class="mt-4">
+        <div class="flex items-center justify-center flex-col">
+          <div class="avatar">
+            <div class="w-18 rounded-full">
+              <img src="../assets/pictures/profile.jpg" alt="Profile Avatar" />
+            </div>
+          </div>
+          <div class="flex items-center gap-3 justify-center mt-3">
+            <img
+              src="../assets/pictures/india.png"
+              alt="India"
+              class="size-4"
+            />
+            <h2 class="text-2xl font-semibold">John John</h2>
+          </div>
+          <p class="text-sm my-1 text-center">johnjohn@gmail.com</p>
+          <button
+            class="btn rounded-lg bg-[#0c586e] text-white font-bold border-none shadow-none mt-2"
+          >
+            GHM
+          </button>
+        </div>
+      </div>
+
+      <!-- USER INFOS -->
+      <form class="mx-8 my-12">
+        <!-- ID -->
+        <div class="form-control mb-4">
+          <div class="border border-gray-300 rounded-xl">
+            <input
+              type="text"
+              value="ID- 453927"
+              class="input w-full bg-transparent text-gray-300 font-bold placeholder:text-gray-400 p-3 outline-none"
+            />
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-control mb-4">
+          <div class="border border-gray-300 rounded-xl">
+            <input
+              type="tel"
+              value="+91 9685425876"
+              class="input w-full bg-transparent text-gray-300 font-bold placeholder:text-gray-400 p-3 outline-none"
+            />
+          </div>
+        </div>
+
+        <!-- Referral Code -->
+        <div class="form-control mb-2">
+          <label class="label mb-1">
+            <span class="label-text text-white">Referral Code</span>
+          </label>
+          <div class="relative border border-gray-300 rounded-lg">
+            <input
+              type="text"
+              value="NDASWD4542"
+              class="input w-full bg-transparent text-gray-300 font-semibold placeholder:text-gray-400 pr-10 p-3 outline-none"
+            />
+            <span
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            >
+              <i class="ri-file-copy-line text-xl"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Referral Link -->
+        <div class="form-control mb-2">
+          <label class="label mb-1">
+            <span class="label-text text-white">Referral Link</span>
+          </label>
+          <div class="relative border border-gray-300 rounded-lg">
+            <input
+              type="text"
+              value="http/bdgasawsxshhcsccxxasxds.in"
+              class="input w-full bg-transparent text-gray-300 font-semibold placeholder:text-gray-400 pr-10 p-3 outline-none"
+            />
+            <span
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            >
+              <i class="ri-file-copy-line text-xl"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Withdrawal Address -->
+        <div class="form-control mb-2">
+          <label class="label mb-1">
+            <span class="label-text text-white"
+              >Withdrawal address (USDT BEP20)</span
+            >
+          </label>
+          <div class="relative border border-gray-300 rounded-lg">
+            <input
+              type="text"
+              value="0XSDKHSCIASHJ734ENCAKL9"
+              class="input w-full bg-transparent text-gray-300 font-semibold placeholder:text-gray-400 pr-10 p-3 outline-none"
+            />
+            <span
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            >
+              <i class="ri-edit-line text-lg"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <!-- FOOTER -->
+      <div>
+        <footer
+          class="footer flex px-4 items-center justify-between bg-transparent text-white py-10"
+        >
+          <h6 class="text-md font-semibold">About us</h6>
+          <h6 class="text-md font-semibold">Terms & Condition</h6>
+          <h6 class="text-md font-semibold">Support</h6>
+          <h6 class="text-md font-semibold">Privacy policy</h6>
+        </footer>
+        <hr />
+        <div class="footer-info text-center text-sm mt-4 pb-4">
+          © 2025 All Rights Reserved by HUTBIT
+        </div>
+      </div>
+    </main>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const closeMenu = document.getElementById("closeMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
