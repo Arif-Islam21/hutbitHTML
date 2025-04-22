@@ -23,15 +23,6 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <style>
-      .modal {
-        display: none;
-      }
-
-      .modal.active {
-        display: flex;
-      }
-    </style>
   </head>
   <body class="lg:max-w-md mx-auto">
     <nav class="">
@@ -142,95 +133,407 @@
         </button>
       </div>
 
-      <!-- FIRST MODAL -->
-      <!-- Header Section -->
-      <div class="bg-gray-900 text-white">
-        <!-- Header Section -->
-        <div class="my-6 mx-4 flex justify-between items-center">
-          <div class="flex items-center gap-4">
-            <h2 class="text-xl font-semibold">Total Miners</h2>
-            <h2 class="text-xl font-semibold">5250</h2>
+      <!-- GROUPS -->
+      <div class="my-6 flex mx-4 justify-between items-center">
+        <div class="flex items-center gap-4">
+          <h2 class="text-xl font-semibold">Total Miners</h2>
+          <h2 class="text-xl font-semibold">5250</h2>
+        </div>
+        <button onclick="my_modal_1.showModal()" class="cursor-pointer">
+          <i class="ri-user-line text-[20px]"></i>
+        </button>
+      </div>
+
+      <!-- SECOND HEADING AND FILTERF -->
+      <div class="my-6 flex mx-4 justify-between items-center">
+        <div class="flex items-center gap-4">
+          <h2 class="text-xl font-semibold">Total Business</h2>
+          <h2 class="text-xl font-semibold">$4,56,789</h2>
+        </div>
+        <button onclick="my_modal_2.showModal()" class="cursor-pointer">
+          <i class="ri-filter-line text-[26px]"></i>
+        </button>
+      </div>
+
+      <!-- COIN BUTTONS -->
+      <div
+        class="my-4 border-t-4 border-b-4 py-8 flex justify-around gap-3 flex-wrap border-gray-500"
+      >
+        <!-- Left Buttons Section -->
+        <div class="flex flex-wrap gap-4 justify-between items-center">
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hm</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              256
+            </button>
           </div>
-          <button id="openModal" class="cursor-pointer btn btn-ghost">
-            👤
-          </button>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">mhm</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              128
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">ghm</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              64
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">thm</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              32
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hhm</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              16
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">shm</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              8
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">cmo</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              4
+            </button>
+          </div>
         </div>
 
-        <!-- Modal -->
-        <div
-          id="modal"
-          class="modal fixed inset-0 z-50 items-center justify-center p-4 bg-black bg-opacity-50"
-        >
-          <div
-            class="relative max-w-lg w-full rounded-xl bg-black border-2 border-gray-700 p-8 shadow-md"
-            onclick="event.stopPropagation()"
-          >
-            <h2 class="text-center font-bold text-xl mb-6">INFO</h2>
-
-            <!-- ID -->
-            <div class="form-control mb-4">
-              <label class="label">
-                <span class="label-text text-white text-xl font-semibold"
-                  >ID</span
-                >
-              </label>
-              <input
-                type="text"
-                value="234567"
-                class="input w-full bg-transparent font-bold text-gray-400 border border-gray-300"
-              />
-            </div>
-
-            <!-- Name -->
-            <div class="form-control mb-4">
-              <label class="label">
-                <span
-                  class="label-text text-white text-xl font-semibold flex items-center gap-2"
-                >
-                  👤 Name
-                </span>
-              </label>
-              <input
-                type="text"
-                value="name"
-                class="input w-full bg-transparent font-bold text-gray-400 border border-gray-300"
-              />
-            </div>
-
-            <!-- Email -->
-            <div class="form-control mb-4">
-              <label class="label">
-                <span
-                  class="label-text text-white text-xl font-semibold flex items-center gap-2"
-                >
-                  ✉️ Email
-                </span>
-              </label>
-              <input
-                type="text"
-                value="email"
-                class="input w-full bg-transparent font-bold text-gray-400 border border-gray-300"
-              />
-            </div>
-
-            <!-- Phone -->
-            <div class="form-control mb-2">
-              <label class="label">
-                <span
-                  class="label-text text-white text-xl font-semibold flex items-center gap-2"
-                >
-                  📞 Phone Number
-                </span>
-              </label>
-              <input
-                type="text"
-                value="+91 936564749"
-                class="input w-full bg-transparent font-bold text-gray-400 border border-gray-300"
-              />
-            </div>
+        <!-- Right Hut Section -->
+        <div class="flex flex-wrap gap-2 justify-around items-center">
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hut 1</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              9456
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hut 2</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              9456
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hut 3</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              9456
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hut 4</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              9456
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hut 5</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              9456
+            </button>
+          </div>
+          <div class="max-w-fit">
+            <h5 class="uppercase text-center">hut 6</h5>
+            <button
+              class="cursor-pointer font-bold px-2 py-1 rounded-lg bg-[#1959d0] shadow-md shadow-[#3c979f]"
+            >
+              9456
+            </button>
           </div>
         </div>
       </div>
+
+      <!-- LAST FILTER BUTTON -->
+      <div
+        class="px-4 my-6 py-3 mx-3 flex items-center justify-around bg-gradient-to-b from-[#64A0FA] to-[#1B4262] rounded-[2rem]"
+      >
+        <div class="flex flex-col text-center">
+          <h1 class="text-2xl font-semibold">H1</h1>
+          <p class="text-sm font-light text-[#20C52B]">Active</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <h1 class="text-xl font-semibold">NOAH</h1>
+          <p class="text-xs text-white">ID-786139</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <h1 class="text-2xl font-semibold">$1,05,400</h1>
+        </div>
+        <div class="flex flex-col cursor-pointer text-center">
+          <h1 class="text-4xl font-semibold">
+            <i class="ri-arrow-down-s-line"></i>
+          </h1>
+        </div>
+      </div>
+
+      <!-- MODAL ONE -->
+      <dialog id="my_modal_1" class="modal">
+        <div
+          class="modal-box max-w-lg text-white bg-black border-2 border-[#73b3b2] shadow-[#73b3b2] shadow-md p-12 rounded-xl space-y-4"
+        >
+          <h3 class="font-bold text-xl text-center">INFO</h3>
+
+          <!-- ID Field -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span class="label-text text-xl font-semibold text-white"
+                >ID</span
+              >
+            </label>
+            <input
+              type="text"
+              value="234567"
+              class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400 border border-gray-300 rounded-lg"
+            />
+          </div>
+
+          <!-- Name Field -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span
+                class="label-text text-xl font-semibold text-white flex items-center gap-2"
+              >
+                <i class="ri-user-line"></i> Name
+              </span>
+            </label>
+            <input
+              type="text"
+              value="name"
+              class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400 border border-gray-300 rounded-lg"
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span
+                class="label-text text-xl font-semibold text-white flex items-center gap-2"
+              >
+                <i class="ri-mail-line"></i> Email
+              </span>
+            </label>
+            <input
+              type="text"
+              value="email"
+              class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400 border border-gray-300 rounded-lg"
+            />
+          </div>
+
+          <!-- Phone Field -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span
+                class="label-text text-xl font-semibold text-white flex items-center gap-2"
+              >
+                <i class="ri-phone-line"></i> Phone Number
+              </span>
+            </label>
+            <input
+              type="text"
+              value="+91 936564749"
+              class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400 border border-gray-300 rounded-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Outside Click to Close -->
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+
+      <!-- MODAL TWO -->
+      <dialog id="my_modal_2" class="modal">
+        <div
+          class="modal-box max-w-lg space-y-4 text-white rounded-xl bg-black border-2 border-[#73b3b2] shadow-[#73b3b2] shadow-md px-12 py-6"
+        >
+          <!-- Top Controls -->
+          <div class="flex items-center justify-around gap-8">
+            <div class="flex items-center gap-2">
+              <h2 class="text-green-600 font-bold">Active</h2>
+              <button
+                onclick="toggle(this)"
+                class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+              >
+                <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+              </button>
+            </div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-red-600 font-bold">Inactive</h2>
+              <button
+                onclick="toggle(this)"
+                class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+              >
+                <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Lists Section -->
+          <div class="flex items-center justify-between">
+            <!-- Left Column -->
+            <div class="flex items-end justify-center gap-2 flex-col">
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hm</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">mhm</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">ghm</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">thm</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hhm</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hhm</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">cmo</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex items-end justify-center gap-2 flex-col">
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hut 1</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hut 2</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hut 3</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hut 4</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hut 5</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <h2 class="uppercase font-bold">hut 6</h2>
+                <button
+                  onclick="toggle(this)"
+                  class="w-14 h-8 rounded-full flex items-center px-1 transition-all duration-300 bg-gray-300 justify-start"
+                >
+                  <div class="w-6 h-6 bg-white rounded-full shadow-md"></div>
+                </button>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="ri-arrow-right-line text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Click outside to close -->
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </main>
     <script>
       const menuBtn = document.getElementById("menuBtn");
@@ -245,18 +548,17 @@
         mobileMenu.classList.add("hidden");
       });
 
-      //   modal 1
-      const modal = document.getElementById("modal");
-      const openModalBtn = document.getElementById("openModal");
-
-      openModalBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        modal.classList.add("active");
-      });
-
-      modal.addEventListener("click", () => {
-        modal.classList.remove("active");
-      });
+      // MODAL BUTTONS
+      function toggle(btn) {
+        const isOn = btn.classList.contains("justify-end");
+        if (isOn) {
+          btn.classList.remove("justify-end", "bg-blue-500");
+          btn.classList.add("justify-start", "bg-gray-300");
+        } else {
+          btn.classList.remove("justify-start", "bg-gray-300");
+          btn.classList.add("justify-end", "bg-blue-500");
+        }
+      }
     </script>
   </body>
 </html>
