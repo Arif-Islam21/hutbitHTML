@@ -117,155 +117,145 @@
         </ul>
       </div>
     </nav>
-    <main>
-      <div class="p-8">
-        <div class="flex items-center justify-between p-4">
-          <h2>Raise a Ticket</h2>
-          <h3>Status</h3>
-        </div>
+    <main class="min-h-screen flex items-center justify-center px-4">
+      <div class="w-full max-w-sm p-6 bg-transparent rounded-lg">
+        <h2 class="text-3xl font-semibold text-center text-white mb-6">
+          Sign Up
+        </h2>
 
-        <form
-          id="ticketForm"
-          class="bg-black p-6 rounded-lg shadow-md border-2 border-gray-600"
-        >
-          <div class="form-control mb-2">
+        <form>
+          <!-- Name -->
+          <div class="form-control mb-4">
             <label class="label">
-              <span class="label-text text-xl font-semibold text-white"
-                >ID</span
-              >
+              <span class="label-text text-white">Name</span>
             </label>
-            <div class="relative border border-gray-300 rounded-lg">
+            <div class="border border-gray-300 rounded-lg">
               <input
                 type="text"
-                value="234567"
-                class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400"
+                placeholder=""
+                class="input w-full bg-transparent text-white placeholder:text-gray-400"
               />
             </div>
           </div>
 
-          <div class="form-control mb-2">
+          <!-- Email -->
+          <div class="form-control mb-4">
             <label class="label">
-              <span
-                class="label-text text-xl flex items-center gap-2 font-semibold text-white"
-              >
-                <i class="ri-user-line"></i> Name
-              </span>
+              <span class="label-text text-white">Email</span>
             </label>
             <div class="relative border border-gray-300 rounded-lg">
               <input
+                type="email"
+                class="input w-full bg-transparent text-white placeholder:text-gray-400 pr-16"
+              />
+              <a
+                href="./emailVerification.html"
+                class="absolute right-3 top-1/2 text-blue-400 transform -translate-y-1/2 text-sm cursor-pointer"
+              >
+                Get Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Email Verification Code -->
+          <div class="form-control mb-4">
+            <label class="label">
+              <span class="label-text text-white">Email Verification Code</span>
+            </label>
+            <div class="border border-gray-300 rounded-lg">
+              <input
                 type="text"
-                value="name"
-                class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400"
+                placeholder=""
+                class="input w-full bg-transparent text-white placeholder:text-gray-400"
               />
             </div>
           </div>
 
-          <div class="form-control mb-2">
+          <!-- Phone Number -->
+          <div class="form-control mb-4">
             <label class="label">
-              <span
-                class="label-text text-xl flex items-center gap-2 font-semibold text-white"
-              >
-                <i class="ri-mail-line"></i> Email
-              </span>
+              <span class="label-text text-white">Phone Number</span>
             </label>
             <div class="relative border border-gray-300 rounded-lg">
+              <div
+                class="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center gap-2 text-white"
+              >
+                <img
+                  src="https://flagcdn.com/w40/in.png"
+                  alt="flag"
+                  class="w-5 h-5 rounded"
+                />
+                <i class="ri-arrow-down-s-line"></i>
+                <span>+91</span>
+              </div>
               <input
-                type="text"
-                value="email"
-                class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400"
+                type="number"
+                class="input w-full bg-transparent text-white placeholder:text-gray-400 pl-24 pr-4"
               />
             </div>
           </div>
 
+          <!-- Password -->
           <div class="form-control mb-2">
             <label class="label">
-              <span
-                class="label-text text-xl flex items-center gap-2 font-semibold text-white"
-              >
-                <i class="ri-phone-line"></i> Phone Number
-              </span>
+              <span class="label-text text-white">Password</span>
             </label>
             <div class="relative border border-gray-300 rounded-lg">
               <input
-                type="text"
-                value="+91 936564749"
-                class="input w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400"
+                type="password"
+                placeholder="Enter your password"
+                class="input w-full bg-transparent text-white placeholder:text-gray-400 pr-10"
               />
+              <span
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              >
+                <i class="ri-eye-line text-xl"></i>
+              </span>
             </div>
           </div>
 
+          <!-- Confirm Password -->
           <div class="form-control mb-2">
             <label class="label">
-              <span
-                class="label-text text-xl flex items-center gap-2 font-semibold text-white"
-              >
-                <i class="ri-clipboard-line"></i> Problem Details
-              </span>
+              <span class="label-text text-white">Confirm Password</span>
             </label>
             <div class="relative border border-gray-300 rounded-lg">
-              <textarea
-                placeholder="Describe the issue you're facing in detail..."
-                class="textarea w-full bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400"
-              ></textarea>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                class="input w-full bg-transparent text-white placeholder:text-gray-400 pr-10"
+              />
+              <span
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              >
+                <i class="ri-eye-line text-xl"></i>
+              </span>
             </div>
           </div>
 
-          <div class="form-control flex flex-col mb-2">
-            <label class="label">
-              <span
-                class="label-text text-xl flex items-center gap-2 font-semibold text-white"
-              >
-                Attach File <span class="text-sm">(upto 10mb)</span>
-              </span>
-            </label>
-            <input
-              type="file"
-              class="max-w-42 px-4 my-2 cursor-grab py-1 rounded-lg border-2 bg-transparent font-bold placeholder:text-gray-400 pr-10 text-gray-400"
-            />
+          <!-- Terms & Conditions -->
+          <div class="mt-2">
+            <fieldset class="fieldset rounded-box w-full">
+              <label class="fieldset-label text-white font-bold">
+                <input
+                  type="checkbox"
+                  class="checkbox border-2 border-gray-300 mr-2"
+                />
+                Terms & conditions & Privacy Policy
+              </label>
+            </fieldset>
           </div>
 
-          <div class="flex items-center justify-center my-4">
-            <button
-              class="btn text-white bg-blue-600 font-bold border-none shadow-none"
-            >
-              Submit Ticket
-            </button>
-          </div>
+          <!-- Submit -->
+          <button class="btn btn-primary w-full mt-4">Continue</button>
+
+          <!-- Link -->
+          <p class="mt-4 text-center text-white text-sm">
+            Already have an account?
+            <a href="#" class="text-blue-400 hover:underline">Login</a>
+          </p>
         </form>
-
-        <div
-          class="text-center flex flex-col gap-2 mt-8 items-center justify-center py-4"
-        >
-          <p class="text-gray-400 font-semibold">You can mail us at</p>
-          <p
-            class="font-semibold text-[#4848FF] hover:underline cursor-pointer"
-          >
-            hutbut@gmail.com
-          </p>
-          <p class="text-gray-400 font-semibold">
-            Our support team will solve your problems within 24 hours
-          </p>
-        </div>
       </div>
-
-      <!-- ticket Modal Trigger -->
-      <dialog id="ticket_modal" class="modal">
-        <div
-          class="modal-box flex flex-col items-center justify-center bg-gradient-to-b from-[#012a36] to-[#003437] min-h-screen w-full text-white p-12 max-w-lg"
-        >
-          <div>
-            <h3 class="font-bold text-3xl text-center mb-4">
-              Your Ticket has been Submitted Successfully
-            </h3>
-            <div class="flex justify-center items-center">
-              <img
-                src="../assets/pictures/services/ticketSuccess.png"
-                alt="ticket success"
-              />
-            </div>
-          </div>
-        </div>
-      </dialog>
     </main>
     <script>
       const menuBtn = document.getElementById("menuBtn");
@@ -279,21 +269,6 @@
       closeMenu.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
       });
-
-      document
-        .getElementById("ticketForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          // Show the modal
-          const ticketModal = document.getElementById("ticket_modal");
-          ticketModal.showModal();
-
-          // Redirect after 2 seconds
-          setTimeout(() => {
-            window.location.href = "./supportTicket.html"; // change this to your desired page
-          }, 2000);
-        });
     </script>
   </body>
 </html>

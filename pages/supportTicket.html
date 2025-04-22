@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="bg-gradient-to-b from-[#012a36] to-[#0d4b6e] min-h-screen text-white"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/pictures/bitCoin.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="lg:max-w-md mx-auto">
+    <nav class="">
+      <div class="navbar flex justify-between items-center p-4 bg-first">
+        <div class="navbar-start"></div>
+
+        <div class="navbar-center">
+          <a class="text-xl font-bold text-white">HUTBIT</a>
+        </div>
+
+        <div class="navbar-end">
+          <button
+            id="menuBtn"
+            class="btn btn-ghost bg-[#012a36] text-white p-2 rounded"
+          >
+            <!-- Menu Icon (HiMenuAlt4 replacement) -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden fixed inset-0 z-50 bg-black/70 p-4 flex flex-col lg:max-w-md mx-auto items-start"
+      >
+        <button id="closeMenu" class="text-white text-3xl self-end mb-4">
+          &times;
+          <!-- HiX replacement -->
+        </button>
+        <ul class="menu text-white w-full space-y-2">
+          <li>
+            <a href="/" class="block p-2 rounded hover:bg-gray-700">Home</a>
+          </li>
+          <li>
+            <a href="/profile" class="block p-2 rounded hover:bg-gray-700"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a href="/groups" class="block p-2 rounded hover:bg-gray-700"
+              >Group</a
+            >
+          </li>
+          <li>
+            <a
+              href="./pages/boost.html"
+              class="block p-2 rounded hover:bg-gray-700"
+              >Boost</a
+            >
+          </li>
+          <li>
+            <a href="/profit" class="block p-2 rounded hover:bg-gray-700"
+              >Profit</a
+            >
+          </li>
+          <li>
+            <a href="/wallet" class="block p-2 rounded hover:bg-gray-700"
+              >Wallet</a
+            >
+          </li>
+          <li>
+            <a href="/support" class="block p-2 rounded hover:bg-gray-700"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a
+              href="./pages/aboutUs.html"
+              class="block p-2 rounded hover:bg-gray-700"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/login" class="block p-2 rounded hover:bg-gray-700"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div>
+        <!-- Pending Tickets -->
+        <div class="border-b-2 border-gray-300 pb-4 mb-4">
+          <h2 class="text-2xl font-semibold mb-4">Pending...</h2>
+          <div class="flex flex-col gap-3">
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08657</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08658</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08659</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08660</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08661</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closed Tickets -->
+        <div class="pb-6">
+          <h2 class="text-2xl font-semibold mb-4">Closed</h2>
+          <div class="flex flex-col gap-3">
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08657</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08658</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08659</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08660</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+            <div
+              class="flex justify-between items-center p-3 border border-white rounded-lg"
+            >
+              <h4>Ticket 08661</h4>
+              <i class="ri-arrow-right-line text-2xl cursor-pointer"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const closeMenu = document.getElementById("closeMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
