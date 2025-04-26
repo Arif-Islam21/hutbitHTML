@@ -169,13 +169,13 @@
                 </div>
                 <div class="flex justify-around pt-2 gap-3">
                   <button
-                    onclick="alert('Wallet Address')"
+                    onclick="redeem_modal.showModal()"
                     class="btn btn-sm btn-outline border-white text-white"
                   >
                     Wallet Address
                   </button>
                   <button
-                    onclick="alert('Redeem Now')"
+                    onclick="redeem_modal.showModal()"
                     class="btn btn-sm bg-blue-500 hover:bg-blue-600 text-white"
                   >
                     Redeem Now
@@ -196,13 +196,13 @@
                 </div>
                 <div class="flex justify-end pt-2 gap-3">
                   <button
-                    onclick="alert('Wallet Address')"
+                    onclick="cummulative_redeem.showModal()"
                     class="btn btn-sm btn-outline border-white text-white"
                   >
                     Wallet Address
                   </button>
                   <button
-                    onclick="alert('Redeem Now')"
+                    onclick="cummulative_redeem.showModal()"
                     class="btn btn-sm bg-blue-500 hover:bg-blue-600 text-white"
                   >
                     Redeem Now
@@ -255,63 +255,243 @@
       <!-- MODALS GOES HERE -->
       <!-- RENT NOW MODAL -->
       <dialog id="rent_modal" class="modal">
-        <div>
-          <div
-            class="modal-box relative z-50 w-full h-full max-w-lg space-y-4 text-white rounded-xl bg-black border-2 border-blue-400 shadow-md shadow-blue-700 p-12"
-          >
-            <!-- Title -->
-            <h3 class="font-bold text-center text-xl">Rent Now</h3>
+        <div
+          class="modal-box relative z-50 w-full h-full max-w-fit max-h-fit space-y-4 text-white rounded-xl bg-black border-2 border-blue-400 shadow-md shadow-blue-700 p-12"
+        >
+          <!-- Title -->
+          <h3 class="font-bold text-center text-xl">Rent Now</h3>
 
-            <!-- Divider -->
-            <hr class="border-blue-400 h-2" />
+          <!-- Divider -->
+          <hr class="border-blue-400 h-2" />
 
-            <!-- USDC Input -->
+          <!-- USDC Input -->
+          <div class="flex items-center gap-2">
+            <img
+              src="../assets/pictures/services/usdc.png"
+              class="w-6 h-6"
+              alt="USDC"
+            />
+            <input
+              type="text"
+              value="1000"
+              class="w-20 bg-white text-black text-center rounded-md"
+            />
+            <p class="text-lg font-semibold">USDT</p>
+          </div>
+
+          <!-- Expected Earning -->
+          <div>
+            <legend class="text-sm text-white mb-1">Expected Earning</legend>
             <div class="flex items-center gap-2">
-              <img
-                src="../assets/pictures/services/usdc.png"
-                class="w-6 h-6"
-                alt="USDC"
-              />
+              <fieldset class="fieldset">
+                <input
+                  type="text"
+                  class="bg-black text-white border border-white placeholder-white py-1 text-center rounded-md"
+                  placeholder="7-10"
+                />
+              </fieldset>
+              <h4>USDT/Day</h4>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex gap-4 justify-center mt-6">
+            <button
+              onclick="qr_modal.showModal()"
+              class="btn bg-[#4C7FDD] border-none text-white font-semibold shadow-none"
+            >
+              Connect Wallet
+            </button>
+            <button
+              onclick="qr_modal.showModal()"
+              class="btn bg-[#4C7FDD] border-none text-white font-semibold shadow-none"
+            >
+              USDT
+            </button>
+          </div>
+        </div>
+
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+
+      <!-- QR CODE MODAL -->
+      <dialog id="qr_modal" class="modal">
+        <div
+          class="modal-box relative z-50 max-w-fit space-y-4 text-white rounded-xl bg-black border-2 border-blue-400 shadow-md shadow-blue-700 p-12"
+        >
+          <!-- Modal Title -->
+          <h3 class="font-bold text-xl text-center">Details</h3>
+          <hr class="border-blue-400 h-2" />
+
+          <!-- QR Code Container -->
+          <div
+            class="flex justify-center p-4 bg-white max-w-fit mx-auto rounded-md"
+          >
+            <!-- Placeholder QR Code image -->
+            <img
+              src="../assets/pictures/services/qr.png"
+              alt="QR Code"
+              class="w-28 h-28"
+            />
+          </div>
+
+          <!-- Wallet Address Input -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span class="label-text text-xs font-thin text-white">
+                USDT BEP20 Wallet Address
+              </span>
+            </label>
+            <div class="relative border border-gray-300 rounded-lg">
               <input
                 type="text"
-                value="1000"
-                class="w-20 bg-white text-black text-center rounded-md"
+                value="0X47F4ghdw2kDY47Vdjdb74t6au3gFSj5"
+                class="input w-full bg-transparent text-white placeholder-gray-400 pr-10"
+                readonly
               />
-              <p class="text-lg font-semibold">USDT</p>
-            </div>
-
-            <!-- Expected Earning -->
-            <div>
-              <legend class="text-sm text-white mb-1">Expected Earning</legend>
-              <div class="flex items-center gap-2">
-                <fieldset class="fieldset">
-                  <input
-                    type="text"
-                    class="bg-black text-white border border-white placeholder-white py-1 text-center rounded-md"
-                    placeholder="7-10"
-                  />
-                </fieldset>
-                <h4>USDT/Day</h4>
-              </div>
-            </div>
-
-            <!-- Buttons -->
-            <div class="flex gap-4 justify-center mt-6">
-              <label
-                for="rent-modal"
-                class="btn bg-[#4C7FDD] border-none text-white font-semibold shadow-none"
+              <!-- Copy Icon (placeholder) -->
+              <span
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
               >
-                Connect Wallet
-              </label>
-              <label
-                for="rent-modal"
-                class="btn bg-[#4C7FDD] border-none text-white font-semibold shadow-none"
-              >
-                USDT
-              </label>
+                📋
+              </span>
             </div>
           </div>
         </div>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+
+      <!-- REDDEM NOW MODAL -->
+      <dialog id="redeem_modal" class="modal">
+        <div
+          class="modal-box relative z-50 max-w-fit space-y-4 text-white rounded-xl bg-black border-2 border-blue-400 shadow-md shadow-blue-700 p-12"
+        >
+          <!-- Title -->
+          <h3 class="font-bold text-xl text-center">Mining Profit Redeem</h3>
+          <hr class="border-blue-400 h-2" />
+
+          <!-- USDT Amount -->
+          <div class="flex items-center justify-around gap-2">
+            <img
+              src="../assets/pictures/tether.png"
+              class="w-6 h-6"
+              alt="USDC"
+            />
+            <input
+              type="text"
+              value="1264"
+              class="w-20 bg-white text-black text-center rounded-md"
+              readonly
+            />
+            <p class="text-lg font-semibold">USDT</p>
+          </div>
+
+          <!-- Wallet Address Input -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span class="label-text text-xs font-thin text-white">
+                USDT BEP20 Wallet Address
+              </span>
+            </label>
+            <div class="relative border border-gray-300 rounded-lg">
+              <input
+                type="text"
+                value="0X47F4ghdw2kDY47Vdjdb74t6au3gFSj5"
+                class="input w-full bg-transparent text-white placeholder:text-gray-400 pr-10"
+                readonly
+              />
+              <span
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
+              >
+                📋
+              </span>
+            </div>
+          </div>
+
+          <!-- Redeem Button -->
+          <form class="flex gap-4 mt-4 justify-center" method="dialog">
+            <button
+              for="redeem-modal"
+              class="btn bg-blue-700 py-0 border-none text-white font-semibold shadow-none"
+            >
+              Redeem Now
+            </button>
+          </form>
+        </div>
+
+        <!-- Backdrop that closes modal on click -->
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+
+      <!-- CUMMULATIVE REDEEM MODAL -->
+      <dialog id="cummulative_redeem" class="modal">
+        <div
+          class="modal-box relative z-50 max-w-fit space-y-4 text-white rounded-xl bg-black border-2 border-blue-400 shadow-md shadow-blue-700 p-12"
+        >
+          <!-- Modal Title -->
+          <h3 class="font-bold text-center text-xl">
+            Cumulative Profit Redeem
+          </h3>
+          <hr class="border-blue-400 h-2" />
+
+          <!-- USDT Amount -->
+          <div class="flex items-center justify-around gap-2">
+            <img
+              src="../assets/pictures/services/bit.png"
+              class="w-6 h-6"
+              alt="USDC"
+            />
+            <input
+              type="text"
+              value="1264"
+              class="w-20 bg-white text-black text-center rounded-md"
+              readonly
+            />
+            <p class="text-lg font-semibold">USDT</p>
+          </div>
+
+          <!-- Wallet Address -->
+          <div class="form-control mb-2">
+            <label class="label">
+              <span class="label-text text-xs font-thin text-white">
+                USDT BEP20 Wallet Address
+              </span>
+            </label>
+            <div class="relative border border-gray-300 rounded-lg">
+              <input
+                type="text"
+                value="0X47F4ghdw2kDY47Vdjdb74t6au3gFSj5"
+                class="input w-full bg-transparent text-white placeholder:text-gray-400 pr-10"
+                readonly
+              />
+              <span
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
+              >
+                📋
+              </span>
+            </div>
+          </div>
+
+          <!-- Redeem Button -->
+          <form class="flex gap-4 mt-4 justify-center" method="dialog">
+            <button
+              class="btn bg-blue-700 py-0 border-none text-white font-semibold shadow-none"
+            >
+              Redeem Now
+            </button>
+          </form>
+        </div>
+
+        <!-- Backdrop that closes the modal -->
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
       </dialog>
     </main>
     <script>
