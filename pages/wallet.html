@@ -148,7 +148,7 @@
                 </div>
                 <div class="flex justify-end pt-2">
                   <button
-                    onclick="alert('Open Rent Modal')"
+                    onclick="rent_modal.showModal()"
                     class="btn btn-sm bg-blue-500 hover:bg-blue-600 text-white"
                   >
                     Rent Now
@@ -251,6 +251,68 @@
           </div>
         </div>
       </div>
+
+      <!-- MODALS GOES HERE -->
+      <!-- RENT NOW MODAL -->
+      <dialog id="rent_modal" class="modal">
+        <div>
+          <div
+            class="modal-box relative z-50 w-full h-full max-w-lg space-y-4 text-white rounded-xl bg-black border-2 border-blue-400 shadow-md shadow-blue-700 p-12"
+          >
+            <!-- Title -->
+            <h3 class="font-bold text-center text-xl">Rent Now</h3>
+
+            <!-- Divider -->
+            <hr class="border-blue-400 h-2" />
+
+            <!-- USDC Input -->
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/pictures/services/usdc.png"
+                class="w-6 h-6"
+                alt="USDC"
+              />
+              <input
+                type="text"
+                value="1000"
+                class="w-20 bg-white text-black text-center rounded-md"
+              />
+              <p class="text-lg font-semibold">USDT</p>
+            </div>
+
+            <!-- Expected Earning -->
+            <div>
+              <legend class="text-sm text-white mb-1">Expected Earning</legend>
+              <div class="flex items-center gap-2">
+                <fieldset class="fieldset">
+                  <input
+                    type="text"
+                    class="bg-black text-white border border-white placeholder-white py-1 text-center rounded-md"
+                    placeholder="7-10"
+                  />
+                </fieldset>
+                <h4>USDT/Day</h4>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-4 justify-center mt-6">
+              <label
+                for="rent-modal"
+                class="btn bg-[#4C7FDD] border-none text-white font-semibold shadow-none"
+              >
+                Connect Wallet
+              </label>
+              <label
+                for="rent-modal"
+                class="btn bg-[#4C7FDD] border-none text-white font-semibold shadow-none"
+              >
+                USDT
+              </label>
+            </div>
+          </div>
+        </div>
+      </dialog>
     </main>
     <script>
       const menuBtn = document.getElementById("menuBtn");
